@@ -6,9 +6,9 @@
 
     </head>
     <body>
-        郵便番号追加<br />
-        <form method="post" action="jyuusyo_add.php">
-            郵便番号を入力してください。<br />
+        電話番号追加<br />
+        <form method="post" action="Eme-ruadoresu_add.php">
+            電話番号を入力してください。<br />
             <input type="text" name="ID" style="width:200px"><br />
             <input type="button" onclick="history.back()" value="戻る">
             <input type="submit" value="OK">
