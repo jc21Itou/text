@@ -25,7 +25,7 @@
 
         print'個人情報一覧<br /><br />';
 
-        print'<form method="post" action="staff_branch.php">';
+        print'<form method="post" action="kojin_branch.php">';
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -33,13 +33,15 @@
             {
                 break;
             }
-            print'<input type="radio" name="staffcode" value="'.$rec['code'].'">';
-            print $rec['name'];
+            print'<input type="radio" name="ID" name="simei" name="hurigana" value="'.$rec['ID'].'" value="'.$rec['simei'].'" value="'.$rec['hurigana'].'">';
+            print $rec['ID'];
+            print $rec['simei'];
+            print $rec['hurigana'];
             print'<br />';
         }
-        print'<input type="submit" name="disp" value="参照">';
-        print'<input type="submit" name="add" value="追加">';
-        print'<input type="submit" name="edit" value="修正">';
+        print'<input type="submit" name="disp" value="個別表示">';
+        print'<input type="submit" name="add" value="新規登録">';
+        print'<input type="submit" name="edit" value="データ修正">';
         print'<input type="submit" name="delete" value="削除">';
         print'</form>';
 

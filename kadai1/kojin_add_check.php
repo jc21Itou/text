@@ -101,7 +101,7 @@
         print'<br />';
     }
 
-    if($kojin_ID==''||$kojin_simei==''||$kojin_hurigana==''||$kojin_yuubinnbanngou==''||$kojin_jyuusyo==''||$kojin_dennwabanngou==''||$kojin_Email)
+    if($kojin_ID==''||$kojin_simei==''||$kojin_hurigana==''||$kojin_yuubinnbanngou==''||$kojin_jyuusyo==''||$kojin_dennwabanngou==''||$kojin_Email=='')
     {
         print'<form>';
         print'<input type="button"onclick="history.back()"value="戻る">';
@@ -109,7 +109,14 @@
     }
     else
     {
-        print'<form method="post" action="staff_add_done.php">';
+        print'<form method="post" action="kojin_add_done.php">';
+        print'<input type="hidden" name="ID"value="'.$kojin_ID.'">';
+        print'<input type="hidden" name="simei"value="'.$kojin_simei.'">';
+        print'<input type="hidden" name="hurigana"value="'.$kojin_hurigana.'">';
+        print'<input type="hidden" name="yuubinnbanngou"value="'.$kojin_yuubinnbanngou.'">';
+        print'<input type="hidden" name="jyuusyo"value="'.$kojin_jyuusyo.'">';
+        print'<input type="hidden" name="dennwabanngou"value="'.$kojin_dennwabanngou.'">';
+        print'<input type="hidden" name="Email"value="'.$kojin_Email.'">';
         print'<input type="button"onclick="history.back()" value="戻る">';
         print'<input type="submit"value="OK">';
         print'</form>';
