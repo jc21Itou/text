@@ -23,7 +23,7 @@
 
         $dbh = null;
 
-        print'個人情報一覧<br><br>';
+        print'個人情報一覧<br /><br />';
 
         print'<form method="post" action="kojin_branch.php">';
         while(true)
