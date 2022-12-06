@@ -48,6 +48,7 @@
         print'</form>';
 
     }
+    
     catch(Exception $e)
     {
         print'ただいま障害により大変なご迷惑をお掛けしております。';
