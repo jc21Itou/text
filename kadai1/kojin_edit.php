@@ -43,12 +43,11 @@
     個人情報修正<br />
     <br />
     氏名<br />
+    <form method="post" action="kojin_edit_check.php">
     <?php print $kojin_simei;?>
     <br />
     <br />
-    <form method="post" action="kojin_edit_check.php">
-    <input type="hidden" name="code" value="<?php print$staff_code;?>">
-    スタッフ名<br />
+    <input type="text" name="code" value="<?php print$kojin_simei;?>">
     <br />
     <input type="button" onclick="history.back()"value="戻る">
     <input type="submit" value="OK">
