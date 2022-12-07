@@ -109,7 +109,7 @@
     }
     else
     {
-        print'<form method="post" action="kojin_branch.php">';
+        print'<form method="post" action="kojin_edit_done.php">';
         print'<input type="hidden" name="ID"value="'.$kojin_ID.'">';
         print'<input type="hidden" name="simei"value="'.$kojin_simei.'">';
         print'<input type="hidden" name="hurigana"value="'.$kojin_hurigana.'">';

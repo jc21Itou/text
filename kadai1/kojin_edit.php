@@ -47,22 +47,23 @@
 
     個人情報修正<br />
     <br />
-    氏名<br />
+    <br />
     <form method="post" action="kojin_edit_check.php">
-    <?php print $kojin_simei;?>
+    
     <br />
+    <input type="text" name="ID" value="<?php print$kojin_ID;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_simei;?>">
+    <input type="text" name="simei" value="<?php print $kojin_simei;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_hurigana;?>">
+    <input type="text" name="hurigana" value="<?php print$kojin_hurigana;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_yuubinnbanngou;?>">
+    <input type="text" name="yuubinnbanngou" value="<?php print$kojin_yuubinnbanngou;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_jyuusyo;?>">
+    <input type="text" name="jyuusyo" value="<?php print$kojin_jyuusyo;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_dennwabanngou;?>">
+    <input type="text" name="dennwabanngou" value="<?php print$kojin_dennwabanngou;?>">
     <br />
-    <input type="text" name="code" value="<?php print$kojin_Email;?>">
+    <input type="text" name="Email" value="<?php print$kojin_Email;?>">
     <br />
     <input type="button" onclick="history.back()"value="戻る">
     <input type="submit" value="OK">

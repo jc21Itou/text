@@ -34,7 +34,7 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'UPDATE kojin SET ID=?,simei=?,hurigana=? WHERE ID=?';
+        $sql = 'UPDATE kojin SET simei=?,hurigana=?,yuubinnbanngou=?,jyuusyo=?,dennwabanngou=?,Email=? WHERE ID=?';
             $stmt = $dbh->prepare($sql);
             $data[] = $kojin_simei;
             $data[] = $kojin_hurigana;
