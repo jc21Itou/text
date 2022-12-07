@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>個人情報管理</title>
+        <title>データ修正</title>
 
     </head>
     <body>
