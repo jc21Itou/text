@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>データ修正</title>
+        <title>個別表示</title>
     </head>
     <body>
         
@@ -11,9 +11,7 @@
     try
     {
 
-        
         $kojin_ID=$_GET['ID'];
-        
 
         $dsn = 'mysql:dbname=shop;host=localhost;charset=utf8';
         $user = 'root';
@@ -45,33 +43,36 @@
 
     ?>
 
-    個人情報修正<br />
+    個人情報一覧<br />
     <br />
+    ID<br />
+    <?php print $kojin_ID;?>
     <br />
-    <form method="post" action="kojin_edit_check.php">
+    氏名<br />
+    <?php print $kojin_simei;?>
+    <br />
+    ふりがな<br />
+    <?php print $kojin_hurigana;?>
+    <br />
+    郵便番号<br />
+    <?php print $kojin_yuubinnbanngou;?>
+    <br />
+    住所<br />
+    <?php print $kojin_jyuusyo;?>
+    <br />
+    電話番号<br />
+    <?php print $kojin_dennwabanngou;?>
+    <br />
+    E-mail<br />
+    <?php print $kojin_Email;?>
+    <br />
+
+    <form>
     
-    <br />
-    <input type="text" name="ID" value="<?php print$kojin_ID;?>">
-    <br />
-    <input type="text" name="simei" value="<?php print $kojin_simei;?>">
-    <br />
-    <input type="text" name="hurigana" value="<?php print$kojin_hurigana;?>">
-    <br />
-    <input type="text" name="yuubinnbanngou" value="<?php print$kojin_yuubinnbanngou;?>">
-    <br />
-    <input type="text" name="jyuusyo" value="<?php print$kojin_jyuusyo;?>">
-    <br />
-    <input type="text" name="dennwabanngou" value="<?php print$kojin_dennwabanngou;?>">
-    <br />
-    <input type="text" name="Email" value="<?php print$kojin_Email;?>">
-    <br />
     <input type="button" onclick="history.back()"value="戻る">
-    <input type="submit" value="OK">
+    
 </form>
 
     
     </body>
 </html>
-
-        
-    

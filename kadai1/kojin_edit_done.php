@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>新規登録</title>
+        <title>データ修正</title>
 
     </head>
     <body>
@@ -12,7 +12,7 @@
     try
     {
 
-        
+        $kojin_ID = $_POST['ID'];
         $kojin_simei = $_POST['simei'];
         $kojin_hurigana = $_POST['hurigana'];
         $kojin_yuubinnbanngou = $_POST['yuubinnbanngou'];
@@ -34,7 +34,7 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'INSERT INTO kojin(simei,hurigana,yuubinnbanngou,jyuusyo,dennwabanngou,Email) VALUES (?,?,?,?,?,?)';
+        $sql = 'UPDATE kojin SET simei=?,hurigana=?,yuubinnbanngou=?,jyuusyo=?,dennwabanngou=?,Email=? WHERE ID=?';
             $stmt = $dbh->prepare($sql);
             $data[] = $kojin_simei;
             $data[] = $kojin_hurigana;
@@ -42,13 +42,12 @@
             $data[] = $kojin_jyuusyo;
             $data[] = $kojin_dennwabanngou;
             $data[] = $kojin_Email;
+            $data[] = $kojin_ID;
             $stmt->execute($data);
 
             $dbh = null;
 
-            print $kojin_simei ;
-            print'さんを追加しました。<br />';
-
+            
         }
         catch (Exception $e)
         {
@@ -58,6 +57,9 @@
         }
         
         ?>
+
+        修正しました。<br />
+        <br />
 
         <a href="kojin_list.php">戻る</a>
     

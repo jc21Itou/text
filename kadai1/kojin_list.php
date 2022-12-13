@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>個人情報管理</title>
+        <title>一覧表示</title>
+        <link rel="stylesheet" href="./css/kojin_list.css" >
     </head>
     <body>
         
@@ -25,7 +26,7 @@
 
         print'個人情報一覧<br /><br />';
 
-        print'<form method="post" action="kojin_edit.php">';
+        print'<form method="post" action="kojin_branch.php">';
         while(true)
         {
             $rec = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -42,9 +43,9 @@
             print'<br />';
         }
         print'<button type="submit" name="disp" > 個別表示 </button>';
-        print'<button type="submit" name="disp" > データ修正 </button>';
-        print'<button type="submit" name="disp" > 新規登録 </button>';
-        print'<button type="submit" name="disp" > 削除 </button>';
+        print'<button type="submit" name="edit" > データ修正 </button>';
+        print'<button type="submit" name="add" > 新規登録 </button>';
+        print'<button type="submit" name="delete" > 削除 </button>';
         print'</form>';
 
     }

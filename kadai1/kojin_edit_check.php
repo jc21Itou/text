@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>新規登録</title>
+        <title>データ修正</title>
 
     </head>
     <body>
@@ -109,7 +109,7 @@
     }
     else
     {
-        print'<form method="post" action="kojin_add_done.php">';
+        print'<form method="post" action="kojin_edit_done.php">';
         print'<input type="hidden" name="ID"value="'.$kojin_ID.'">';
         print'<input type="hidden" name="simei"value="'.$kojin_simei.'">';
         print'<input type="hidden" name="hurigana"value="'.$kojin_hurigana.'">';
