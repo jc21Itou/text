@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>一覧表示</title>
-        <link rel="stylesheet" href="./css/kojin_list.css" >
+        
     </head>
     <body>
-        
+ 
     <?php
+   
 
     try
     {
