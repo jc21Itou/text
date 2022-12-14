@@ -7,7 +7,9 @@
     </head>
     <body>
     <link rel="stylesheet" href="kojin_list.css" >
+
     <?php
+   
 
     try
     {
