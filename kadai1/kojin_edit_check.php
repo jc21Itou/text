@@ -6,6 +6,7 @@
 
     </head>
     <body>
+    <link rel="stylesheet" href="kojin_list.css" >
     <?php
 
     $kojin_ID=$_POST['ID'];

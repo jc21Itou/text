@@ -5,6 +5,7 @@
         <title>データ修正</title>
     </head>
     <body>
+    <link rel="stylesheet" href="kojin_edit.css" >
         
     <?php
 

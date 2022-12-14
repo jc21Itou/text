@@ -6,6 +6,7 @@
 
     </head>
     <body>
+    <link rel="stylesheet" href="kojin_list.css" >
         個人情報追加<br />
         <form method="post" action="kojin_add_check.php">
             IDを入力してください。<br />

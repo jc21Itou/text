@@ -5,7 +5,7 @@
         <title>個別表示</title>
     </head>
     <body>
-        
+    <link rel="stylesheet" href="kojin_list.css" >
     <?php
 
     try
