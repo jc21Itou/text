@@ -38,7 +38,7 @@ if(isset($_POST['delete'])==true)
         header('Location: pro_ng.php');
         exit();
     }
-    $staff_code=$_POST['procode'];
+    $pro_code=$_POST['procode'];
     header('Location:pro_delete.php?procode='.$pro_code);
     exit();
     print'削除ボタンが押された';

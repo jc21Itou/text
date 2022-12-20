@@ -34,7 +34,7 @@
                 break;
             }
             print'<input type="radio" name="procode" value="'.$rec['code'].'">';
-            print $rec['name'].'___';
+            print $rec['name'].'---';
             print $rec['price'].'円';
             print'<br />';
         }
