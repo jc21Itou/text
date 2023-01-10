@@ -33,6 +33,10 @@
 
         if($pro_gazou_name_old=='')
         {
+            $disp_gazou='';
+        }
+        else
+        {
             $disp_gazou='<img src="./gazou/'.$pro_gazou_name_old.'">';
         }
     }
