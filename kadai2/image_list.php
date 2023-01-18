@@ -33,7 +33,7 @@
             {
                 break;
             }
-            print'<input type="radio" name="titlecode" value="'.$rec['title'].'">';
+            print'<input type="radio" name="imageID" value="'.$rec['ID'].'">';
             print $rec['title'].'---';
             print $rec['description'].
             print'<br />';
@@ -46,6 +46,7 @@
     }
     catch(Exception $e)
     {
+        print $e->getMessage();
         print'ただいま障害により大変なご迷惑をお掛けしております。';
         exit();
     }
