@@ -9,7 +9,7 @@
     <?php
 
     $image_title=$_POST['title'];
-    $image_description=$_POST['desc'];
+    $image_description=$_POST['description'];
     $image_file=$_FILES['gazou'];
 
     $image_title=htmlspecialchars($image_title,ENT_QUOTES,'UTF-8');
@@ -63,7 +63,7 @@
         print'この画像を追加します。<br />';
         print'<form method="post"action="image_add_done.php">';
         print'<input type="hidden" name="title" value="'.$image_title.'">';
-        print'<input type="hidden" name="desc" value="'.$image_description.'">';
+        print'<input type="hidden" name="descriotion" value="'.$image_description.'">';
         print'<input type="hidden" name="gazou_name" value="'.$image_file['name'].'">';
         print'<br />';
         print'<button type="button" onclick="history.back()">戻る</button>';

@@ -19,30 +19,31 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT title,description,fail FROM image WHERE ID=?';
+        $sql = 'SELECT title,description,file FROM image WHERE ID=?';
         $stmt = $dbh->prepare($sql);
-        $data[]=$title_code;
+        $data[]=$image_ID;
         $stmt->execute($data);
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
         $image_title=$rec['title'];
         $image_description=$rec['description'];
-        $image_fail_name=$rec['gazou_name'];
+        $image_file_name=$rec['gazou_name'];
 
         $dbh = null;
 
-        if($image_fail_name=='')
+        if($image_file_name=='')
         {
             $disp_gazou='';
         }
         else
         {
-            $disp_gazou='<img src="./gazou/'.$image_fail_name.'">';
+            $disp_gazou='<img src="./gazou/'.$image_file_name.'">';
         }
 
     }
     catch(Exception $e)
     {
+        print $e->getMessage();
         print'ただいま障害により大変ご迷惑をおかけしております。';
         exit();
     }
@@ -59,6 +60,7 @@
     <br />
     <?php print $disp_gazou; ?>
     <br />
+    <?php print $image_description;?>
     <form>
     
     <input type="button" onclick="history.back()"value="戻る">

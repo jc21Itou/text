@@ -33,7 +33,7 @@
             {
                 break;
             }
-            print'<input type="radio" name="imageID" value="'.$rec['ID'].'">';
+            print'<input type="radio" name="ID" value="'.$rec['ID'].'">';
             print $rec['title'].'---';
             print $rec['description'].
             print'<br />';

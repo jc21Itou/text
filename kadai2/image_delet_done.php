@@ -11,8 +11,8 @@
         try
         {
 
-            $image_code = $_POST['imagecode'];
-            $image_fail_name=$_POST['gazou_name'];
+            $image_ID = $_POST['ID'];
+            $image_file_name=$_POST['gazou_name'];
             
 
             $dsn = 'mysql:dbname=shop;host=localhost;charset=utf8';
@@ -21,16 +21,16 @@
             $dbh = new PDO($dsn, $user, $password);
             $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $sql = 'DELETE FROM image WHERE imagecode=?';
+            $sql = 'DELETE FROM fail WHERE code=?';
             $stmt = $dbh->prepare($sql);
-            $data[] = $image_code;
+            $data[] = $image_ID;
             $stmt->execute($data);
 
             $dbh = null;
 
-            if($image_fail_name !='')
+            if($image_file_name !='')
             {
-                unlink('./gazou/'.$image_fail_name);
+                unlink('./gazou/'.$image_file_name);
             }
 
             
