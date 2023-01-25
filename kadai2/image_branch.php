@@ -18,7 +18,7 @@ if(isset($_POST['add'])==true)
     exit();
 }
 
-if(isset($_POST['delete'])==true)
+if(isset($_POST['delet'])==true)
 {
     if(isset($_POST['ID'])==false)
     {
@@ -26,7 +26,7 @@ if(isset($_POST['delete'])==true)
         exit();
     }
     $image_ID=$_POST['ID'];
-    header('Location:image_delete.php?ID='.$image_ID);
+    header('Location:image_delet.php?ID='.$image_ID);
     exit();
     print'削除ボタンが押された';
 }

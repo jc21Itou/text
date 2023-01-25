@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>画像一覧</title>
+        <h1>画像一覧</h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    
+    <link rel="stylesheet" href="image_list.css" >
         
     <?php
 
@@ -17,13 +20,13 @@
         $dbh = new PDO($dsn,$user,$password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT ID,title,description FROM image WHERE 1';
+        $sql = 'SELECT ID,title,description,file FROM image WHERE 1';
         $stmt = $dbh->prepare($sql);
         $stmt->execute();
 
         $dbh = null;
 
-        print'商品一覧<br /><br />';
+        
 
         print'<form method="post" action="image_branch.php">';
         while(true)
@@ -34,13 +37,14 @@
                 break;
             }
             print'<input type="radio" name="ID" value="'.$rec['ID'].'">';
+            print $rec['ID'].
             print $rec['title'].'---';
             print $rec['description'].
             print'<br />';
         }
         print'<input type="submit" name="disp" value="参照">';
         print'<input type="submit" name="add" value="追加">';
-        print'<input type="submit" name="delete" value="削除">';
+        print'<input type="submit" name="delet" value="削除">';
         print'</form>';
 
     }

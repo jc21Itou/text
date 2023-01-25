@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>画像の表示</title>
+        <h1>画像の表示</h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    <link rel="stylesheet" href="image_disp.css" >
         
     <?php
 
@@ -27,7 +29,7 @@
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
         $image_title=$rec['title'];
         $image_description=$rec['description'];
-        $image_file_name=$rec['gazou_name'];
+        $image_file_name=$rec['file'];
 
         $dbh = null;
 
@@ -37,7 +39,7 @@
         }
         else
         {
-            $disp_gazou='<img src="./gazou/'.$image_file_name.'">';
+            $disp_gazou='<img src="./file/'.$image_file_name.'">';
         }
 
     }
@@ -60,7 +62,6 @@
     <br />
     <?php print $disp_gazou; ?>
     <br />
-    <?php print $image_description;?>
     <form>
     
     <input type="button" onclick="history.back()"value="戻る">

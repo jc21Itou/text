@@ -12,7 +12,7 @@
             画像のタイトル<br />
             <input type="text" name="title" style="width:200px"><br />
             画像の説明<br />
-            <input type="text" name="desc" style="width: 500px" style="height: 100px" ><br />
+            <input type="text" name="description" style="width: 500px" style="height: 100px" ><br />
             画像ファイルの選択<br />
             <input type="file" name="gazou" style="width:400px"><br />
             <button type="button" onclick="history.back()">戻る</button>

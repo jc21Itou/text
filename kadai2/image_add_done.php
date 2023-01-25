@@ -12,8 +12,8 @@
         {
 
             $image_title = $_POST['title'];
-            $image_description = $_POST['desc'];
-            $image_file_name = $_POST['gazou_name'];
+            $image_description = $_POST['description'];
+            $image_file_name = $_POST['file'];
 
             $image_title = htmlspecialchars($image_title,ENT_QUOTES,'UTF-8');
             $image_description = htmlspecialchars($image_description,ENT_QUOTES,'UTF-8');

@@ -19,14 +19,14 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = 'SELECT title,fail, FROM image WHERE code=?';
+        $sql = 'SELECT title,file FROM image WHERE ID=?';
         $stmt = $dbh->prepare($sql);
         $data[]=$image_ID;
         $stmt->execute($data);
 
         $rec = $stmt->fetch(PDO::FETCH_ASSOC);
         $image_title=$rec['title'];
-        $image_file_name=$rec['gazou_name'];
+        $image_file_name=$rec['file'];
 
         $dbh = null;
 
@@ -42,6 +42,7 @@
     }
     catch(Exception $e)
     {
+        print $e->getMessage();
         print'ただいま障害により大変ご迷惑をおかけしております。';
         exit();
     }
@@ -59,7 +60,7 @@
     <?php print $disp_gazou;?>
     <br />
     このファイルを削除してよろしいですか？<br />
-    <form method="post" action="image_delete_done.php">
+    <form method="post" action="image_delet_done.php">
     <input type="hidden" name="ID" value="<?php print$image_ID;?>">
     <input type="hidden" name="gazou_name" value="<?php print$image_file_name;?>">
     <button type="button" onclick="history.back()">戻る</button>
