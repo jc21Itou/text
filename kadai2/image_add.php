@@ -4,8 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>画像ライブラリ</title>
+        <h1>画像ライブラリ</h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    <link rel="stylesheet" href="image_add.css" >
         画像登録<br />
         <br />
         <form method="post" action="image_add_check.php" enctype="multipart/form-data">

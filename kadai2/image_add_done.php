@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>画像登録</title>
+        <h1>画像登録<h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    <link rel="stylesheet" href="image_add_done.css" >
+
 
         <?php
 

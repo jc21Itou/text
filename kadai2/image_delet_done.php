@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>ろくまる農園</title>
+        <h1>ろくまる農園</h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    <link rel="stylesheet" href="image_delet_done.css" >
 
         <?php
 

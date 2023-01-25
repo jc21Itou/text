@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>画像の登録確認</title>
+        <h1>画像の登録確認</h1>
     </head>
-    <body>
+    <body bgcolor="#f0ffff">
+    <link rel="stylesheet" href="image_add_check.css" >
         
     <?php
 
