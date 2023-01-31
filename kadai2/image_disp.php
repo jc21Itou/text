@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>画像の表示</title>
-        <h1>画像の表示</h1>
+        
     </head>
     <body bgcolor="#f0ffff">
     <link rel="stylesheet" href="image_disp.css" >
+    <h1>画像の表示</h1>
         
     <?php
 
@@ -39,7 +40,7 @@
         }
         else
         {
-            $disp_gazou='<img src="./file/'.$image_file_name.'">';
+            $disp_gazou='<img src="./image/'.$image_file_name.'">';
         }
 
     }
@@ -52,7 +53,7 @@
 
     ?>
 
-    画像の表示<br />
+    <br />
     <br />
     【タイトル】<br />
     <?php print $image_title;?>
