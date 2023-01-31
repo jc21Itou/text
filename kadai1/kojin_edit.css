@@ -32,3 +32,8 @@ button {
     width: 5em;
     height: 3em;
 }
+
+.box{
+    border: 1px solid #000000;;
+    padding: 10%;
+}

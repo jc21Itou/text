@@ -5,6 +5,7 @@
         <title>ろくまる農園</title>
     </head>
     <body>
+    <link rel="stylesheet" href="pro_list.css" >
         
     <?php
 

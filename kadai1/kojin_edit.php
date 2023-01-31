@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>データ修正</title>
+        <div class="box">データ修正</div>
     </head>
     <body>
     <link rel="stylesheet" href="kojin_edit.css" >
@@ -46,7 +46,7 @@
 
     ?>
 
-    個人情報修正<br />
+    <div class="box">個人情報修正</div><br />
     <br />
     <br />
     <form method="post" action="kojin_edit_check.php">
