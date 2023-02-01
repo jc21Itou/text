@@ -7,6 +7,7 @@
     </head>
     <body bgcolor="#f0ffff">
     <link rel="stylesheet" href="image_delet.css" >
+    
         
     <?php
 
