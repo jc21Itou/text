@@ -57,7 +57,6 @@
     if($image_title==''|| $image_description=='' || $image_file['size'] > 1000000)
     {
         print'<form>';
-        print'<input type="button" onclic="history.back()" value="戻る">';
         print'</form>';
     }
     else
@@ -65,15 +64,16 @@
         print'この画像を追加します。<br />';
         print'<form method="post"action="image_add_done.php">';
         print'<input type="hidden" name="title" value="'.$image_title.'">';
-        print'<input type="hidden" name="descriotion" value="'.$image_description.'">';
-        print'<input type="hidden" name="gazou_name" value="'.$image_file['name'].'">';
+        print'<input type="hidden" name="description" value="'.$image_description.'">';
+        print'<input type="hidden" name="file" value="'.$image_file['name'].'">';
         print'<br />';
-        print'<button type="button" onclick="history.back()">戻る</button>';
         print'<input type="submit" value="OK">';
         print'</form>';
 
     }
+    
     ?>
+    <input type="button" onclick="history.back()"value="戻る">
 
     
     </body>

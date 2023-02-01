@@ -41,7 +41,7 @@
             print $rec['ID'].'<br />';
             print $rec['title'].'---';'<br />';
             print $rec['description'].'<br />';
-            print'<img class="images" src="./image/'. $rec['file'].'">';
+            print'<img class="image" src="./image/'. $rec['file'].'">';
             print'<br />';
         }
         '<br />';

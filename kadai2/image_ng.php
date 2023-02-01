@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>画像表示エラー</title>
     </head>
+    <body bgcolor="#f0ffff">
     <body>
     <link rel="stylesheet" href="image_list.css" >
 

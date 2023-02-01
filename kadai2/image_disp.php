@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>画像の表示</title>
-        
+        <div class="box1"><h1>画像の表示</h1></div>
     </head>
     <body bgcolor="#f0ffff">
+    
     <link rel="stylesheet" href="image_disp.css" >
-    <h1>画像の表示</h1>
+    <dev class="box1">
         
     <?php
 
@@ -54,6 +55,7 @@
     ?>
 
     <br />
+    <tr>
     <br />
     【タイトル】<br />
     <?php print $image_title;?>
@@ -64,11 +66,11 @@
     <?php print $disp_gazou; ?>
     <br />
     <form>
-    
+
     <input type="button" onclick="history.back()"value="戻る">
     
 </form>
-
-    
+</table>
+    </div>
     </body>
 </html>
