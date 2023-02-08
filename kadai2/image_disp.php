@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>画像の表示</title>
-        <h1>画像の表示</h1>
+        <div class="box1"><h1>画像の表示</h1></div>
     </head>
     <body bgcolor="#f0ffff">
+    
     <link rel="stylesheet" href="image_disp.css" >
+    <dev class="box1">
         
     <?php
 
@@ -39,7 +41,7 @@
         }
         else
         {
-            $disp_gazou='<img src="./file/'.$image_file_name.'">';
+            $disp_gazou='<img src="./image/'.$image_file_name.'">';
         }
 
     }
@@ -52,7 +54,8 @@
 
     ?>
 
-    画像の表示<br />
+    <br />
+    <tr>
     <br />
     【タイトル】<br />
     <?php print $image_title;?>
@@ -63,11 +66,11 @@
     <?php print $disp_gazou; ?>
     <br />
     <form>
-    
+
     <input type="button" onclick="history.back()"value="戻る">
     
 </form>
-
-    
+</table>
+    </div>
     </body>
 </html>

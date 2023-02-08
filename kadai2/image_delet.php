@@ -7,6 +7,7 @@
     </head>
     <body bgcolor="#f0ffff">
     <link rel="stylesheet" href="image_delet.css" >
+    
         
     <?php
 
@@ -38,7 +39,7 @@
         }
         else
         {
-            $disp_gazou='<img src="./gazou/'.$image_file_name.'">';
+            $disp_gazou='<img src="./image/'.$image_file_name.'">';
         }
 
     }

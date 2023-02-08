@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>画像一覧</title>
-        <h1>画像一覧</h1>
+        <div class="box1"><h1>画像一覧</h1></div>
     </head>
     <body bgcolor="#f0ffff">
+        <table border="1" style="border-collapse: collapse" cellpadding="10" align="center">
     
     <link rel="stylesheet" href="image_list.css" >
-        
+    <div class="box1">
     <?php
-
+    
     try
     {
 
@@ -37,11 +38,13 @@
                 break;
             }
             print'<input type="radio" name="ID" value="'.$rec['ID'].'">';
-            print $rec['ID'].
-            print $rec['title'].'---';
-            print $rec['description'].
+            print $rec['ID'].'<br />';
+            print $rec['title'].'---';'<br />';
+            print $rec['description'].'<br />';
+            print'<img class="image" src="./image/'. $rec['file'].'">';
             print'<br />';
         }
+        '<br />';
         print'<input type="submit" name="disp" value="参照">';
         print'<input type="submit" name="add" value="追加">';
         print'<input type="submit" name="delet" value="削除">';
@@ -56,5 +59,7 @@
     }
 
     ?>
+    </table>
+    </div>
     </body>
 </html>
